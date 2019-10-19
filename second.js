@@ -1,5 +1,13 @@
 "use strict"
-let  vasiaName = "vasia";
-alert (` привет ${vasiaName} `);
-let value = true;
-value = String(value);   // преобразование из boolean в стринг
+let sum = 0;
+
+while (true) {
+
+  let value = +prompt("Введите число", '');
+
+  if (!value) break; // (*)
+
+  sum += value;
+
+}
+alert( 'Сумма: ' + sum );
