@@ -1,13 +1,19 @@
 "use strict"
-let sum = 0;
+const number = +prompt('Введите число между 0 и 3', '');
+switch (number){
+		case 0:
+			alert('vi vveli chislo 0');
+			break;
+		case 1:
+			alert('vi vveli chislo 1');
+			break;
 
-while (true) {
+		case 2:
+		case 3: 
+			alert ('vi vveli chislo 2 ili 3');
+			break;
+		
 
-  let value = +prompt("Введите число", '');
-
-  if (!value) break; // (*)
-
-  sum += value;
 
 }
-alert( 'Сумма: ' + sum );
+
