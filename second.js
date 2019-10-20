@@ -1,19 +1,19 @@
 "use strict"
-const number = +prompt('Введите число между 0 и 3', '');
-switch (number){
-		case 0:
-			alert('vi vveli chislo 0');
-			break;
-		case 1:
-			alert('vi vveli chislo 1');
-			break;
 
-		case 2:
-		case 3: 
-			alert ('vi vveli chislo 2 ili 3');
-			break;
-		
+function abc(a)
+{
 
-
+ 		
+	if (a <= 18){
+	a = "доступ закрыт";
+	return (a);} else 
+			{ 	
+				a ="Доступ открыт"; 
+					return (a);
+			}
 }
 
+let dostup;
+dostup = abc(19);
+//dostup =12;
+alert(dostup);
