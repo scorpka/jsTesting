@@ -1,25 +1,22 @@
-"use strict" 
+"use strict"/*
+*создаем функцию
+*делаем перебор и если это
+число то умножаем его на два
+*выведем все числовые значения
+*/
 
-/*function abc()
-{
-	alert ("vasia lox");
+ let userName = {
 
+		name:"vacili",
+		pol:"man",
+		vozrast:"35",
+		ves:"75",
 }
 
-abc();*/
-
-let parol = 
-{
-	name: "vasya",
-	password: "1234",
-	age: "32",
+ for (var chisloNaDva in userName){
+ 				userName[chisloNaDva]= userName[chisloNaDva] -1 +1
+				if (  Boolean(userName[chisloNaDva])  != false ){
+					userName[chisloNaDva]= 2*userName[chisloNaDva];
+					alert(userName[chisloNaDva]);
+				}
 }
-
-//alert( parol.password );
-
-for (let x in parol) 
-{
-  //alert( key ); 
-  //alert( parol[x] ); 
-}
-alert(  parol.name === undefined);
