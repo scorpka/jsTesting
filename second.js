@@ -1,22 +1,16 @@
-"use strict"/*
-*создаем функцию
-*делаем перебор и если это
-число то умножаем его на два
-*выведем все числовые значения
-*/
+"use strict"
+let obj2 = {
+  id: 1,
+   name: "vasya",
+    
+   }
+ 
+//obj2.price = [1,2,3];
 
- let userName = {
-
-		name:"vacili",
-		pol:"man",
-		vozrast:"35",
-		ves:"75",
+//alert (obj2.price[1]);
+//obj2.kakZvat()=kakZvat();
+function kakZvat() {
+	alert(this.name);
 }
-
- for (var chisloNaDva in userName){
- 				userName[chisloNaDva]= userName[chisloNaDva] -1 +1
-				if (  Boolean(userName[chisloNaDva])  != false ){
-					userName[chisloNaDva]= 2*userName[chisloNaDva];
-					alert(userName[chisloNaDva]);
-				}
-}
+obj2.kakZvat =  kakZvat;
+obj2.kakZvat();
