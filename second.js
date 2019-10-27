@@ -1,29 +1,24 @@
 "use strict"
-/*var str = "sanya pidor voobshe pizdoc";
-//alert (str.indexOf('pidor'));
-alert( str.slice(3, 11) );
-alert( str.substr(2, 4) );alert( 'Österreich'.localeCompare('Zealand') ); 
-alert( String.fromCodePoint(90) );  Z*/
+/*let fruits = ["Яблоко","Aпельсин","Cлива",];
+fruits.push("dolbaeb"); //dobovlyaet posledni
+fruits.pop(1); //ydalyaet posledni
+fruits.shift(); //ydalyaet pervi element
+fruits.unshift("molodec"); //dobovlyaet pervi element*/
 
-/*function checkSpam(str){
-	if (~str.indexOf('xxx') || ~str.indexOf("viagra") ||  ~str.indexOf("lsd")){
-		return "eto spam";
-	}else return str;
-}
+let styles = ["джаз","Блюз",];
+styles.push("Рок-н-ролл");
+let lengthStyles = +styles.length *0.5;
+lengthStyles =  Math.floor(lengthStyles);
+alert(lengthStyles);
+styles[lengthStyles] = "Классика";
+alert(styles.shift() );
+styles.unshift("Реп");
+styles.unshift("регги");
+alert(styles);
 
-let abc = "ya prishla domoy,viagra vce horosho";
-alert(checkSpam(abc));*/
 
-function truncate(str, maxlength){
-	let	strLength = str.length ;
-	
-	if (strLength < maxlength || strLength == maxlength ){
-			return str;
-	
-	} else {
-					str = str.substr(0,maxlength) +"...";
-					return str;
 
-}
-}
-alert(truncate("zdorova viblyadki",6));
+
+
+
+
