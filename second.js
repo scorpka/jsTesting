@@ -1,20 +1,31 @@
 "use strict"
-let arr = [1, -2, 3, 4, -9, 6];
-let sumChisel = 0;
-function getMaxSubSum() {
-	let i = arr.length;
-	let s4etchik = 0;
-	
-	for (i= i-1;i != -1 ; i--){
-		sumChisel = sumChisel + arr[i];
-		if (arr[i] >= 0) {
-			s4etchik = s4etchik+1;
-		}
+
+let string = "my-short-string"; 
+function camelize(str){
+	let abbc = "";
+	let	abc =  str.split("-");
+	abc.forEach(function dde(item){
+
+		let mmnp = item[0].toUpperCase();
+			item =mmnp + item.slice(1,);
+		abbc = abbc + item;
+	});
+	return abbc;
 	}
-	if (s4etchik == 0){return sumchisel = 0;
-	}else return sumChisel;
-}
-getMaxSubSum();
-alert(sumChisel);
+	
+          
+alert(camelize(string));
+
+
+
+
+
+	
+	
+
+
+
+
+
 
 
