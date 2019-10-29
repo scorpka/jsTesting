@@ -1,38 +1,20 @@
 "use strict"
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
 
-/*
-*create function Calculator
-*create advancing function
-*execute
-*/
+let setUnical = new Set();
+function unique(arr) {
+	for (let i = 0; i < arr.length ; i++){
+		
+		 setUnical.add(arr[i]);
 
-//функции
-function calculate() {
-	let firstOfNumber, secondOfNumber;
-	for (let abc = 0; abc != 10; abc++){
-		
-		 firstOfNumber = prompt("введите 1 число",);
-
-		
-		if ((firstOfNumber - 1 + 1) ==  firstOfNumber) {
-				break;
-				
-		};
-			confirm("vvedite chislo!"); 
-	}	
-	for (let abc = 0; abc != 10; abc++){
-		
-			secondOfNumber = prompt("введите 2 число",);
-		
-		if ((secondOfNumber - 1 + 1) ==  secondOfNumber) {
-				break;
-				
-		};
-	
 	}
-return  (+firstOfNumber + +secondOfNumber);
 }
+unique(values);
+ setUnical.forEach ((value,valueArgument, setUnical) => {
+alert (value);
+});
 
-//вывод
-let SummCalculator = calculate();
-alert (SummCalculator);
+ for (let value of setUnical) alert(value);
+
