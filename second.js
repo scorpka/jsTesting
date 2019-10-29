@@ -1,20 +1,14 @@
 "use strict"
-let values = ["Hare", "Krishna", "Hare", "Krishna",
-  "Krishna", "Krishna", "Hare", "Hare", ":-O"
-];
-
-let setUnical = new Set();
-function unique(arr) {
-	for (let i = 0; i < arr.length ; i++){
-		
-		 setUnical.add(arr[i]);
-
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+function sumSalaries(nashArr){
+	let abc = 0;
+	for (let value of Object.values(nashArr)) {
+			abc = abc + value;
 	}
+	return abc;
 }
-unique(values);
- setUnical.forEach ((value,valueArgument, setUnical) => {
-alert (value);
-});
-
- for (let value of setUnical) alert(value);
-
+alert( sumSalaries(salaries) );
