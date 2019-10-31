@@ -1,9 +1,14 @@
 "use strict"
 
-function sum(a){
-	let abc = a;
-	return function sum(b){
-	return abc + b;
-	}
+
+function printNumbers(from, to) {
+	let timeId = setInterval(function abc() {
+			for (from = from; from <to; from++){
+			alert(from);
+						}},
+			1000)
+
+timeId;
 }
-alert(sum(-4)(1));
+
+printNumbers(0, 10);
