@@ -1,14 +1,9 @@
 "use strict"
-let salaries = {
-  "John": 100,
-  "Pete": 300,
-  "Mary": 250
-};
-function sumSalaries(nashArr){
-	let abc = 0;
-	for (let value of Object.values(nashArr)) {
-			abc = abc + value;
+
+function sum(a){
+	let abc = a;
+	return function sum(b){
+	return abc + b;
 	}
-	return abc;
 }
-alert( sumSalaries(salaries) );
+alert(sum(-4)(1));
