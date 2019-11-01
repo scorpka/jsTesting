@@ -1,22 +1,30 @@
 "use strict"
-function abc(greetings) {
-        alert(this.name + greetings );
+
+let worker = {
+	someMethod() {
+		return 1;
+	},
+
+	slow (x) {
+		alert("called with"+ x);
+		return x * this.someMethod();
+	}
+};
+
+function cachingDecorator(func) {
+		let cache = new Map();
+		return function(x) {
+			if (cache.has(x)) {
+				return cache.get(x);
+			}
+			let result = func.call(this, x);
+			cache.set(x, result);
+			return result;
+		}
+
 }
 
-        let user1 = {
-                name:"kirill",
-}
+worker.slow = cachingDecorator (worker.slow);
 
-abc.call(user1," privet");
-/*function sayHi() {
-  alert(this.name);
-}
-
-let user = { name: "John" };
-let admin = { name: "Admin" };
-
-// используем 'call' для передачи различных объектов в качестве 'this'
-sayHi.call( user ); // this = John
-sayHi.call( admin ); // this = Admin
-
-*/
+alert( worker.slow(2) );
+alert( worker.slow(2) );
