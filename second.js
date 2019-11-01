@@ -1,18 +1,22 @@
 "use strict"
-
-
-function printNumbers(from, to) {
-	let timeId = setInterval(function abc() {
-			alert(from);
-			from++;
-			if (from >= to) clearInterval(timeId);
-				},
-			1000)
-
-timeId;
-
+function abc(greetings) {
+        alert(this.name + greetings );
 }
- setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
 
-printNumbers(0, 10);
-setTimeout();
+        let user1 = {
+                name:"kirill",
+}
+
+abc.call(user1," privet");
+/*function sayHi() {
+  alert(this.name);
+}
+
+let user = { name: "John" };
+let admin = { name: "Admin" };
+
+// используем 'call' для передачи различных объектов в качестве 'this'
+sayHi.call( user ); // this = John
+sayHi.call( admin ); // this = Admin
+
+*/
