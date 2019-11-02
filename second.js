@@ -1,30 +1,21 @@
 "use strict"
+class Article {
+   constructor(title, date) {
+   this.title = title;
+   this.date = date;
+   }
+      static compare(articleA, articleB) {
+      return articleA.date - articleB.date;
+   }
+} 
 
-let worker = {
-	someMethod() {
-		return 1;
-	},
+let articles = [ 
+   new Article("HTML", new Date(2019, 1, 1)),
+   new Article("css", new Date(2019, 0, 1)),
+   new Article("Javascript", new Date(2019, 11, 1)),
+];
 
-	slow (x) {
-		alert("called with"+ x);
-		return x * this.someMethod();
-	}
-};
+articles.sort(Article.compire);
 
-function cachingDecorator(func) {
-		let cache = new Map();
-		return function(x) {
-			if (cache.has(x)) {
-				return cache.get(x);
-			}
-			let result = func.call(this, x);
-			cache.set(x, result);
-			return result;
-		}
+alert( articles[0].title ); 
 
-}
-
-worker.slow = cachingDecorator (worker.slow);
-
-alert( worker.slow(2) );
-alert( worker.slow(2) );
