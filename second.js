@@ -1,14 +1,19 @@
 "use strict"
 
-function testPalindrom (stringUser) {
-		 let j = 0; 
+function executeConsole (n) { 
+	let	textOur= 0;
+		  for (let j= 0; j<n; j++){
+		  	if (j % 3 == 0 && j % 5 == 0 ){
+					 textOur = textOur + "fizzbuzz";
+		  		}else if (j % 3 == 0) {
+					 textOur = textOur + "fizz";
+		  		}else if (j % 5 == 0){ 
+						  textOur = textOur +("buzz");}else { textOur = textOur + j;
 
-		for (let i = 0; i < stringUser.length; i++){
-				  let k = stringUser.length - i-1;
-		  if (stringUser[i] == (stringUser[k])){
-				j++;
-		  }else {alert("your text is not a palindrom"); break;
-					}
-} if(j == stringUser.length) return alert(`your text - ${stringUser} is palindrom`)};
-testPalindrom("anna");
+				}
+		  }
+	console.log(textOur);		
+		 
+}
 
+executeConsole (10);
