@@ -8,7 +8,7 @@ function anagramChecker (firstLetter, secondLetter){
 		let checkker = 0;
 		  for (let	key in firstLetter){ 
 			for (let i = 0; i < secondLetter.length; i++){
-				if (firstLetter[key] == secondLetter[i]){
+				if (firstLetter[key].toLowerCase() == secondLetter[i].toLowerCase()){
 						  	checkker = checkker + 1; break;
 				}
 			}
@@ -16,4 +16,4 @@ function anagramChecker (firstLetter, secondLetter){
 		 if (checkker == firstLetter.length || checkker > firstLetter.length) alert("vtoroe slovo anagramma pervogo");
 }
 
-anagramChecker("zdorova","zdo");
+anagramChecker("zdorova","Zrovado");
