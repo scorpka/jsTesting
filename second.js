@@ -1,7 +1,5 @@
 "use strict"
 
-let stringUser = "test"; 
-
 function testPalindrom (stringUser) {
 		 let j = 0; 
 
@@ -9,8 +7,8 @@ function testPalindrom (stringUser) {
 				  let k = stringUser.length - i-1;
 		  if (stringUser[i] == (stringUser[k])){
 				j++;
-		  }else { alert(stringUser[i]); alert(k);
-		}
-} if(j == stringUser.length) alert(`your text - ${stringUser} is palindrom`)}
+		  }else {alert("your text is not a palindrom"); break;
+					}
+} if(j == stringUser.length) return alert(`your text - ${stringUser} is palindrom`)};
 testPalindrom("anna");
 
