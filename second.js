@@ -1,19 +1,19 @@
 "use strict"
 
-function executeConsole (n) { 
-	let	textOur= 0;
-		  for (let j= 0; j<n; j++){
-		  	if (j % 3 == 0 && j % 5 == 0 ){
-					 textOur = textOur + "fizzbuzz";
-		  		}else if (j % 3 == 0) {
-					 textOur = textOur + "fizz";
-		  		}else if (j % 5 == 0){ 
-						  textOur = textOur +("buzz");}else { textOur = textOur + j;
-
+function anagramChecker (firstLetter, secondLetter){
+		if (firstLetter.length != secondLetter.length){ 
+				 return  alert("second letter is not Anagram for first letter");
+				  
+		}
+		let checkker = 0;
+		  for (let	key in firstLetter){ 
+			for (let i = 0; i < secondLetter.length; i++){
+				if (firstLetter[key] == secondLetter[i]){
+						  	checkker = checkker + 1; break;
 				}
-		  }
-	console.log(textOur);		
-		 
+			}
+		}
+		 if (checkker == firstLetter.length || checkker > firstLetter.length) alert("vtoroe slovo anagramma pervogo");
 }
 
-executeConsole (10);
+anagramChecker("zdorova","zdo");
